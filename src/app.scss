@@ -4,8 +4,6 @@
  $chart-color1: #000;
  $chart-color2: #9faaae;
  $chart-color3: #aeea00;
- $chart-width: 1000px;
- $chart-height: 620px;
 
  body {
      
@@ -49,13 +47,18 @@
     }
 
     .svg-container {
-        width: $chart-width;
-        height: $chart-height;
-        margin: auto;
+        position: relative;
+        height: 0;
+        width: 100%;
+        padding: 0;
+        padding-bottom: 100%;
 
         svg {
-            width: 100%;
+            position: absolute;
             height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
         }
 
         .bar {

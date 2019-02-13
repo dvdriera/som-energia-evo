@@ -1,9 +1,9 @@
 import m from "mithril";
 import * as d3 from "d3";
 
-const margin = 60;
-const width = 1000 - 2 * margin;
-const height = 600 - 2 * margin;
+const margin = 40;
+const width = 900 - 2 * margin;
+const height = 500 - 2 * margin;
 
 const metricContractes = 'contracts';
 const metricSocis = 'members';
@@ -14,9 +14,11 @@ var vchart = {};
 const Chart = {
     oncreate: function(vnode) {
         vchart = d3.select(vnode.dom)
+            .attr("style","padding-bottom: " + Math.ceil(height * 100 / width) + "%")            
             .append("svg")
-            .attr("width", width + margin*2)
-            .attr("height", height + margin*2)
+            //.attr("width", width + margin*2)
+            //.attr("height", height + margin*2)
+            .attr("viewBox", "0 0 " + (width + margin*2) + " " + (height + margin*2))
             .attr("preserveAspectRatio", "xMidYMin meet");
     },
     draw: function(vnode) {

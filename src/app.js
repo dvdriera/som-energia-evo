@@ -16,7 +16,7 @@ const EvolutionChart = {
         m("div.card", 
           m("div.card-content",
             [
-              m("div.card-title",
+              m("div.card-title row",
                 [
                   m("div.col.m6.s12", 
                     "Gràfic evolució del número de " + (vnode.attrs.metric === metricContractes ? "contractes" : "socis")
